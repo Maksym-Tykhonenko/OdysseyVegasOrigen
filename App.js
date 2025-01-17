@@ -23,7 +23,7 @@ import DeviceInfo from 'react-native-device-info';
 
 function App() {
   const [route, setRoute] = useState(false);
-  //console.log('route===>', route);
+  console.log('route===>', route);
   const [responseToPushPermition, setResponseToPushPermition] = useState(false);
   ////('Дозвіл на пуши прийнято? ===>', responseToPushPermition);
   const [uniqVisit, setUniqVisit] = useState(true);
@@ -409,7 +409,7 @@ function App() {
     const checkUrl = `${INITIAL_URL}${URL_IDENTIFAIRE}`;
     //console.log(checkUrl);
 
-    const targetData = new Date('2025-01-15T10:00:00'); //дата з якої поч працювати webView
+    const targetData = new Date('2025-01-20T10:00:00'); //дата з якої поч працювати webView
     const currentData = new Date(); //текущая дата
 
     if (!route) {
@@ -418,8 +418,9 @@ function App() {
       } else {
         fetch(checkUrl)
           .then(r => {
+            console.log('status по клоаке==>', r.status);
             if (r.status === 200) {
-              console.log('status по клоаке==>', r.status);
+              //console.log('status по клоаке==>', r.status);
               setRoute(true);
             } else {
               setRoute(false);

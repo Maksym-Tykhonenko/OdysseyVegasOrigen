@@ -76,6 +76,7 @@ const OdysseyVegasOrigenProdactScreen = ({navigation, route}) => {
     'nl-snsbank-sign://',
     'nl-asnbank-sign://',
     'triodosmobilebanking',
+    'revolut',
   ];
 
   //**івент push_subscribe
